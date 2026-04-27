@@ -19,4 +19,4 @@ I've chosen the "Local Small Business Digital Presence" Subject.
 - [ ] Responsive layout page: overview.html uses Grid for the main layout and Flexbox for internal areas; includes at least one media query; content fits the chosen project scenario; includes 4+ cards with one styled differently; page is validated.
 - [ ] UI design step (Figma): repository includes the exported CSS file (for example figma-auth.css), a screenshot/image of the authentication UI, and evidence of consistent reusable styles/components.
 - [ ] JavaScript interactivity: chatbot page works end-to-end (DOM updates + submit handling), is linked in the menu, and behaves correctly in the browser.
-- [ ] 1.0 point - Validation + publication: updated HTML/CSS validation completed and the final site is published on GitHub Pages.
+- [ ] Validation + publication: updated HTML/CSS validation completed and the final site is published on GitHub Pages.
