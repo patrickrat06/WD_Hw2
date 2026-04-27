@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>The Boo Bakery – Contact</title>
+</head>
+<body>
+
+    <header>
+        <h1>The Boo Bakery</h1>
+        <p>So good it'll scare you!</p>
+    </header>
+ 
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="data.html">Our Products</a>
+    </nav>
+ 
+    <main id="main-content">
+
+    <h2>Contact Us</h2>
+    <p>To Speak with us fill the form below and we'll get back to you when we can!</p>
+ 
+    <section>
+        <h3>Send Us a Message</h3>
+
+        <form action="#" method="post">
+
+        <fieldset>
+            <legend>Your Details</legend>
+            <label for="name">Full name (required)</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email (required)</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone">
+        </fieldset>
+
+        <fieldset>
+            <legend>Your Message</legend>
+            <label for="subject">Subject (required)</label>
+            <input type="text" id="subject" name="subject" required aria-describedby="subject-hint">
+            <p id="subject-hint" class="form-hint">e.g. Questions, Requests, Complaints</p>
+            <label for="user-message">Message (required)</label>
+            <textarea id="user-message" name="message" rows="5" required></textarea>
+        </fieldset>
+
+        <button type="submit">Send Message</button>
+
+        </form>
+    </section>
+ 
+    <section>
+        <h3>Our schedule</h3>
+        <p>Monday - Friday: 10 AM - 18 PM</p>
+        <p>Saturday: 12PM - 16PM</p>
+        <p>Sunday: Closed</p>
+    </section>
+ 
+    </main>
+
+    <footer>
+        <p>&copy; 2026 The Boo Bakery</p>
+    </footer>
+ 
+</body>
+</html>
