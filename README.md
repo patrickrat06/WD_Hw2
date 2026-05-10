@@ -12,7 +12,7 @@ I've chosen the "Local Small Business Digital Presence" Subject.
 - [x] Validation + publication: HTML/CSS validation completed and final site published on GitHub Pages.
 
 ## Checklist Hw2
-- [ ] Starting point: HW2 repository exists, contains a copied HW1 project, and the site can be opened.
+- [x] Starting point: HW2 repository exists, contains a copied HW1 project, and the site can be opened.
 - [ ] Required pages and linking: navigation is consistent on all pages and links work to all required pages, including overview.html and chatbot.html.
 - [ ] CSS fundamentals: specificity.html and specificity.txt are present and completed; CSS improvements are applied consistently across the site (table styling, typography, spacing) and CSS placement is demonstrated (external + at least one internal + at least one inline rule).
 - [ ] Business card page: card.html + card.css exist and meet the required content (image, name, specialization + year, email link, GitHub link) with clean styling.
