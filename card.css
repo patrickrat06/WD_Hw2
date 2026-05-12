@@ -1,0 +1,44 @@
+body {
+    background-color: #ffcd60;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: sans-serif;
+    line-height: 1.8;
+}
+
+#main-container {
+    background-color: #532c5f;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 300px;
+}
+
+#profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #cd8ef4;
+    margin-bottom: 15px;
+}
+
+.full-name {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffcd60;
+    margin: 10px 0 5px 0;
+}
+
+.specialisation {
+    color: #ffcd60;
+    font-style: italic;
+    margin-bottom: 20px;
+}
