@@ -8,9 +8,151 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
     <title>The Boo Bakery – Overview</title>
+
+    <style>
+ 
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+ 
+        .featured-section {
+            grid-column: 1 / 2;
+        }
+ 
+        .sidebar-section {
+            grid-column: 2 / 3;
+            grid-row: 1 / 3;
+        }
+ 
+        .highlight-section {
+            grid-column: 1 / 2;
+        }
+ 
+ 
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin-top: 1rem;
+        }
+ 
+        .card {
+            background-color: #532c5f;
+            color: #ffffff;
+            border-radius: 10px;
+            padding: 1.2rem 1.4rem;
+            flex: 1 1 180px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+ 
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+        }
+ 
+        .card h3 {
+            font-family: "Comic Relief", system-ui;
+            color: #ffcd60;
+            margin-bottom: 0.4rem;
+            font-size: 1rem;
+        }
+ 
+        .card p {
+            font-size: 0.88rem;
+            line-height: 1.5;
+            margin: 0;
+            opacity: 0.9;
+        }
+ 
+        .card .price {
+            display: inline-block;
+            margin-top: 0.7rem;
+            font-weight: bold;
+            color: #ffcd60;
+            font-size: 0.95rem;
+        }
+ 
+ 
+        .card.featured {
+            background-color: #ffcd60;
+            color: #310944;
+            border: 3px solid #532c5f;
+            flex: 1 1 100%;
+        }
+ 
+        .card.featured h3 {
+            color: #532c5f;
+            font-size: 1.2rem;
+        }
+ 
+        .card.featured p {
+            opacity: 1;
+            color: #310944;
+        }
+ 
+        .card.featured .price {
+            color: #532c5f;
+        }
+ 
+        .featured-badge {
+            display: inline-block;
+            background-color: #532c5f;
+            color: #ffcd60;
+            font-size: 0.72rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+ 
+ 
+        .sidebar-section {
+            background-color: #532c5f;
+            color: #ffffff;
+            border-radius: 10px;
+            padding: 1.4rem;
+        }
+ 
+        .sidebar-section h2 {
+            font-family: "Comic Relief", system-ui;
+            color: #ffcd60;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+ 
+        .sidebar-section p,
+        .sidebar-section li {
+            font-size: 0.9rem;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+ 
+        @media (max-width: 680px) {
+            .overview-grid {
+                grid-template-columns: 1fr;
+            }
+ 
+            .featured-section,
+            .sidebar-section,
+            .highlight-section {
+                grid-column: 1 / 2;
+                grid-row: auto;
+            }
+ 
+            .card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-
+ 
     <header>
         <h1>The Boo Bakery</h1>
         <p>So good it'll scare you!</p>
@@ -23,3 +165,70 @@
         <a href="contact.html">Contact | </a>
         <a href="chatbot.html">Chatbot</a>
     </nav>
+ 
+    <main id="main-content">
+ 
+        <h2 style="margin-top: 1.5rem;">Overview</h2>
+        <p>A quick look at what The Boo Bakery has to offer.</p>
+ 
+        <div class="overview-grid">
+ 
+            <section class="featured-section">
+                <h2>Featured Items</h2>
+                <p>Our most popular picks this season.</p>
+ 
+                <div class="cards">
+ 
+                    <div class="card featured">
+                        <span class="featured-badge">Our Recommendation</span>
+                        <h3>Spooky Cupcake Platter</h3>
+                        <p>A dozen of our signature Halloween-decorated cupcakes — perfect for parties, school events, or just treating yourself.</p>
+                        <span class="price">50 RON / 12 pieces</span>
+                    </div>
+ 
+                    <div class="card">
+                        <h3>Personalised Cakes</h3>
+                        <p>Custom cakes for any occasion. Work with us to design something unique.</p>
+                        <span class="price">From 200 RON</span>
+                    </div>
+ 
+                    <div class="card">
+                        <h3>Mini Cakes Casserole</h3>
+                        <p>Can't decide? Get sample-sized slices of all our unique cakes in one box.</p>
+                        <span class="price">100 RON / 20 pcs</span>
+                    </div>
+ 
+                    <div class="card">
+                        <h3>Find more at our locations!</h3>
+                        <p>Many of our products are exclusively available at out stores.</p>
+                    </div>
+ 
+                </div>
+            </section>
+ 
+
+            <aside class="sidebar-section">
+                <h2>Helpful Information</h2>
+                <p>We're based in Timișoara and open during this schedule:</p>
+                <ul>
+                    <li>Mon – Fri: 10:00 – 18:00</li>
+                    <li>Saturday: 12:00 – 16:00</li>
+                    <li>Sunday: Closed</li>
+                </ul>
+                <p style="margin-top: 1rem;">Some orders can be delivered directly to your home!</p>
+                <p>Got questions? Visit our <a href="contact.html">Contact page</a> and we'll get back to you.</p>
+            </aside>
+ 
+
+            <section class="highlight-section">
+                <h2>Why Choose Us?</h2>
+                <p>We do more than your normal bakery. We want to support and create a community of Halloween enthusiasts! Find more about our process on our <a href="contact.html">about page.</a></p>
+            </section>
+ 
+        </div>
+ 
+    </main>
+ 
+    <footer>
+        <p>&copy; 2026 The Boo Bakery</p>
+    </footer>
