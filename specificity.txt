@@ -1,0 +1,42 @@
+1.
+
+
+
+Paragraph A: 
+    Properties: color: gray, font-size: 1rem, font-family: Georgia.
+    Receives its properties from the element selector (p).
+
+Paragraph B: 
+    Properties from .info: color: steel blue, font-size: 1.25rem, font-family: Arial; Inherited from p: line-height: 1.4, padding: 4px 0.
+    Matches both p and the class selector (.info).
+
+Paragraph C: 
+    Properties from #warning: color: dark red, font-style: italic, letter-spacing: 0.15em; Inherited from p: font-family: Georgia, line-height: 1.4.
+    Matches both p and the id selector (#warning).
+
+Paragraph D:
+    Properties from #warning.info: color: dark orange, font-size: 1.1rem, border: 2px solid dark orange.
+    Properties from p: font-family: Georgia, line-height: 1.4.
+    Matches p, .info, #warning, and the combined selector #warning.info.
+
+
+
+2.
+
+
+
+The color used by browser is dark orange.
+This comes from the #warning.info selector. 
+An ID + Class combination is more powerful than just an ID, Class or Element.
+
+Font used by browser -> Georgia, serif
+Because none of the stronger selectors contain a specification for the font,
+the browser still uses the one provided in (p),
+even though the other selectors are higher up in the hierarchy.
+
+
+
+3.
+
+
+
