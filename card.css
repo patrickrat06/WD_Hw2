@@ -32,7 +32,7 @@ a {
 }
 
 .full-name {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Comic Relief", system-ui;
     color: #ffcd60;
     margin: 10px 0 5px 0;
 }
