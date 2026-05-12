@@ -15,7 +15,8 @@ nav {
   color:#ffffff;
   background-color:#532c5f;
   font-size: 1.3rem;
-  text-align: center
+  text-align: center;
+  width: 70%;
 }
 
 a {
