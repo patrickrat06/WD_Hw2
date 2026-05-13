@@ -14,9 +14,9 @@ I've chosen the "Local Small Business Digital Presence" Subject.
 ## Checklist Hw2
 - [x] Starting point: HW2 repository exists, contains a copied HW1 project, and the site can be opened.
 - [x] Required pages and linking: navigation is consistent on all pages and links work to all required pages, including overview.html and chatbot.html.
-- [ ] CSS fundamentals: specificity.html and specificity.txt are present and completed; CSS improvements are applied consistently across the site (table styling, typography, spacing) and CSS placement is demonstrated (external + at least one internal + at least one inline rule).
+- [x] CSS fundamentals: specificity.html and specificity.txt are present and completed; CSS improvements are applied consistently across the site (table styling, typography, spacing) and CSS placement is demonstrated (external + at least one internal + at least one inline rule).
 - [x] Business card page: card.html + card.css exist and meet the required content (image, name, specialization + year, email link, GitHub link) with clean styling.
-- [ ] Responsive layout page: overview.html uses Grid for the main layout and Flexbox for internal areas; includes at least one media query; content fits the chosen project scenario; includes 4+ cards with one styled differently; page is validated.
-- [ ] UI design step (Figma): repository includes the exported CSS file (for example figma-auth.css), a screenshot/image of the authentication UI, and evidence of consistent reusable styles/components.
-- [ ] JavaScript interactivity: chatbot page works end-to-end (DOM updates + submit handling), is linked in the menu, and behaves correctly in the browser.
+- [x] Responsive layout page: overview.html uses Grid for the main layout and Flexbox for internal areas; includes at least one media query; content fits the chosen project scenario; includes 4+ cards with one styled differently; page is validated.
+- [x] UI design step (Figma): repository includes the exported CSS file (for example figma-auth.css), a screenshot/image of the authentication UI, and evidence of consistent reusable styles/components.
+- [x] JavaScript interactivity: chatbot page works end-to-end (DOM updates + submit handling), is linked in the menu, and behaves correctly in the browser.
 - [ ] Validation + publication: updated HTML/CSS validation completed and the final site is published on GitHub Pages.
