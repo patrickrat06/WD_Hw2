@@ -39,4 +39,5 @@ even though the other selectors are higher up in the hierarchy.
 3.
 
 
-
+The additional style specification inside specificity.html overrides the style from specificity.css
+because internal css is taken into account later than external css in the cascading sheets order.
