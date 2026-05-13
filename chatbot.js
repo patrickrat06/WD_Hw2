@@ -1,33 +1,33 @@
 let questions = [
     {
-        question: "Do you feel happy?",
+        question: "Does bread need yeast to rise?",
         options: {
             a: "Yes",
             b: "No"
         },
         correctAnswer: "a",
-        correctResponse: "Super!",
-        incorrectResponse: "I am sorry"
+        correctResponse: "Yes, yeast produces the gas that makes bread rise.",
+        incorrectResponse: "Actually, yeast is what makes bread light and fluffy!"
     },
     {
-        question: "Is grass green?",
-        options: {
-            a: "Yes",
-            b: "No"
-        },
-        correctAnswer: "a",
-        correctResponse: "That's right!",
-        incorrectResponse: "Actually, grass is green!"
-    },
-    {
-        question: "Is 2 + 2 equal to 5?",
+        question: "Is a cupcake the same as a muffin?",
         options: {
             a: "Yes",
             b: "No"
         },
         correctAnswer: "b",
-        correctResponse: "Correct, well done!",
-        incorrectResponse: "Not quite — 2 + 2 is indeed 4!"
+        correctResponse: "Correct! Cupcakes are sweet and frosted, muffins are denser and less sweet.",
+        incorrectResponse: "No, cupcakes and muffins are actually different treats!"
+    },
+    {
+        question: "Are croissants originally from France?",
+        options: {
+            a: "Yes",
+            b: "No"
+        },
+        correctAnswer: "b",
+        correctResponse: "Indeed! Croissants actually originated in Austria.",
+        incorrectResponse: "Croissants actually originated in Austria, not France!"
     }
 ];
 
