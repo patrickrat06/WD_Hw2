@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
+    <title>Portfolio – The Boo Bakery</title>
+
+    <style>
+
+        main {
+            max-width: 860px;
+            margin: 1.5rem auto;
+            padding: 0 1rem;
+        }
+
+        fieldset {
+            border: 1px solid currentColor;
+            border-radius: 6px;
+            padding: 1rem 1.2rem 1.2rem;
+            margin-bottom: 1.4rem;
+        }
+
+        legend {
+            font-weight: 700;
+            padding: 0 0.4rem;
+        }
+
+        .field {
+            margin-bottom: 1rem;
+        }
+        .field:last-child {
+            margin-bottom: 0;
+        }
+
+        label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .required {
+            color: red;
+            margin-left: 2px;
+        }
+
+        input[type="text"],
+        input[type="url"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            font-family: inherit;
+            font-size: 1rem;
+            padding: 0.45rem 0.6rem;
+            border: 1px solid #555;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input.invalid,
+        select.invalid,
+        textarea.invalid {
+            border-color: red;
+            outline: 2px solid red;
+        }
+
+        .error-msg {
+            display: none;
+            color: red;
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+        }
+        .error-msg.visible {
+            display: block;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.2rem;
+        }
+        .checkbox-group label {
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        button[type="submit"] {
+            font-family: inherit;
+            font-size: 1rem;
+            padding: 0.6rem 1.4rem;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        /* ── Responsive table ── */
+        #projects-section {
+            margin-top: 2rem;
+            display: none;
+        }
+        #projects-section.visible {
+            display: block;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            width: 100%;
+        }
+
+        #projects-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        #projects-table caption {
+            caption-side: top;
+            text-align: left;
+            font-weight: 700;
+            padding: 0.5rem 0.3rem;
+            font-size: 1rem;
+        }
+
+        #projects-table th,
+        #projects-table td {
+            border: 1px solid #555;
+            padding: 0.5rem 0.7rem;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        #projects-table th {
+            font-weight: 700;
+        }
+
+        #projects-table img {
+            width: 80px;
+            height: 55px;
+            object-fit: cover;
+            border-radius: 3px;
+            display: block;
+        }
+
+        #projects-table .no-img {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        /* Responsive: stack form fields on small screens */
+        @media (max-width: 500px) {
+            fieldset {
+                padding: 0.8rem;
+            }
+            button[type="submit"] {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <h1>The Boo Bakery</h1>
+        <p>So good it'll scare you!</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <a href="overview.html">Overview | </a>
+        <a href="about.html">About | </a>
+        <a href="data.html">Our Products | </a>
+        <a href="contact.html">Contact | </a>
+        <a href="chatbot.html">Chatbot | </a>
+        <a href="cv.html">CV</a>
+    </nav>
+
+    <main id="main-content">
+        <h2>My Projects</h2>
+        <p>Fill in the form below to add a project to your portfolio.
+            All projects will be listed in a table at the bottom of the page.
+        </p>
+
+        <form id="project-form" novalidate aria-label="Add a project">
+
+            <fieldset>
+                <legend>Project Information</legend>
+
+                <div class="field">
+                    <label for="proj-name">
+                        Project Name <span class="required" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                        type="text"
+                        id="proj-name"
+                        name="proj-name"
+                        aria-required="true"
+                        aria-describedby="proj-name-error"
+                        placeholder="e.g. Personal Website"
+                    >
+                    <span id="proj-name-error" class="error-msg" role="alert">
+                        Please enter a project name.
+                    </span>
+                </div>
+
+                <div class="field">
+                    <label for="proj-desc">
+                        Description <span class="required" aria-hidden="true">*</span>
+                    </label>
+                    <textarea id="proj-desc" name="proj-desc" rows="4" aria-required="true"
+                        aria-describedby="proj-desc-error"
+                        placeholder="Briefly describe what the project does and your role in it.">
+                    </textarea>
+                    <span id="proj-desc-error" class="error-msg" role="alert">
+                        Please enter a description (at least 10 characters).
+                    </span>
+                </div>
+
+                <div class="field">
+                    <label for="proj-url">
+                        Project URL <span class="required" aria-hidden="true">*</span>
+                    </label>
+                    <input type="url" id="proj-url" name="proj-url" aria-required="true"
+                        aria-describedby="proj-url-error" placeholder="https://example.com">
+                    <span id="proj-url-error" class="error-msg" role="alert">
+                        Please enter a valid URL starting with http:// or https://
+                    </span>
+                </div>
+
+                <div class="field">
+                    <label for="proj-date">
+                        Completion Date <span class="required" aria-hidden="true">*</span>
+                    </label>
+                    <input type="date" id="proj-date" name="proj-date" aria-required="true"
+                        aria-describedby="proj-date-error">
+                    <span id="proj-date-error" class="error-msg" role="alert">
+                        Please select a completion date.
+                    </span>
+                </div>
+
+                <div class="field">
+                    <label>Technologies <span class="required" aria-hidden="true">*</span></label>
+                    <div class="checkbox-group" role="group" aria-label="Technologies used"
+                        aria-describedby="tech-error" id="tech-group">
+                        <label><input type="checkbox" name="tech" value="HTML"> HTML</label>
+                        <label><input type="checkbox" name="tech" value="CSS"> CSS</label>
+                        <label><input type="checkbox" name="tech" value="JavaScript"> JavaScript</label>
+                        <label><input type="checkbox" name="tech" value="Python"> Python</label>
+                        <label><input type="checkbox" name="tech" value="Other"> Other</label>
+                    </div>
+                    <span id="tech-error" class="error-msg" role="alert">
+                        Please select at least one technology.
+                    </span>
+                </div>
+
+                <div class="field">
+                    <label for="proj-image">Project Image (URL)</label>
+                    <input type="url" id="proj-image" name="proj-image"
+                        aria-describedby="proj-image-hint proj-image-error"
+                        placeholder="https://example.com/screenshot.png">
+                    <span id="proj-image-hint" style="font-size:0.82rem;">Optional – paste a direct image URL for a thumbnail.</span>
+                    <span id="proj-image-error" class="error-msg" role="alert">
+                        If provided, the image URL must start with http:// or https://
+                    </span>
+                </div>
+            </fieldset>
+
+            <button type="submit">Add Project</button>
+
+        </form>
+
+        <section id="projects-section" aria-live="polite" aria-label="Submitted projects">
+            <h3>Submitted Projects</h3>
+            <div class="table-wrapper">
+                <table id="projects-table">
+                    <caption>Projects added to your portfolio</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Nr</th>
+                            <th scope="col">Project Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">URL</th>
+                            <th scope="col">Technologies</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Completion Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="projects-tbody">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        let rowCount = 0;
+        const projectForm = document.getElementById('project-form');
+
+        function markInvalid(el, errorId) {
+            el.classList.add('invalid');
+            document.getElementById(errorId).classList.add('visible');
+        }
+        
+        function markValid(el, errorId) {
+            el.classList.remove('invalid');
+            document.getElementById(errorId).classList.remove('visible');
+        }
+        
+        function isValidUrl(str) {
+            try {
+                const url = new URL(str.trim());
+                return url.protocol === "http:" || url.protocol === "https:";
+            } catch (_) {
+                return false;  
+            }
+        }
+
+        document.getElementById('proj-name').addEventListener('blur', function () {
+            this.value.trim() ? markValid(this, 'proj-name-error') : markInvalid(this, 'proj-name-error');
+        });
+        
+        document.getElementById('proj-desc').addEventListener('blur', function () {
+            this.value.trim().length >= 10 ? markValid(this, 'proj-desc-error') : markInvalid(this, 'proj-desc-error');
+        });
+        
+        document.getElementById('proj-url').addEventListener('blur', function () {
+            isValidUrl(this.value) ? markValid(this, 'proj-url-error') : markInvalid(this, 'proj-url-error');
+        });
+        
+        document.getElementById('proj-date').addEventListener('blur', function () {
+            this.value ? markValid(this, 'proj-date-error') : markInvalid(this, 'proj-date-error');
+        });
+        
+        document.getElementById('proj-image').addEventListener('blur', function () {
+            if (this.value.trim() === '' || isValidUrl(this.value)) {
+                markValid(this, 'proj-image-error');
+            } else {
+                markInvalid(this, 'proj-image-error');
+            }
+        });
+
+        projectForm.addEventListener('submit', function (e) {
+            e.preventDefault(); 
+            let isValidSubmission = true;
+
+            const name = document.getElementById('proj-name');
+            const desc = document.getElementById('proj-desc');
+            const url  = document.getElementById('proj-url');
+            const date = document.getElementById('proj-date');
+            const img  = document.getElementById('proj-image');
+            const techs = [...document.querySelectorAll('input[name="tech"]:checked')];
+
+
+            if (!name.value.trim()) { 
+                markInvalid(name, 'proj-name-error');     
+                isValidSubmission = false; 
+            } else {
+                markValid(name, 'proj-name-error');
+            }
+
+
+            if (desc.value.trim().length < 10) { 
+                markInvalid(desc, 'proj-desc-error');     
+                isValidSubmission = false; 
+            } else {
+                markValid(desc, 'proj-desc-error');
+            }
+
+
+            if (!isValidUrl(url.value)) { 
+                markInvalid(url,  'proj-url-error');      
+                isValidSubmission = false; 
+            } else {
+                markValid(url,  'proj-url-error');
+            }
+
+
+            if (!date.value) { 
+                markInvalid(date, 'proj-date-error');     
+                isValidSubmission = false; 
+            } else {
+                markValid(date, 'proj-date-error');
+            }
+
+
+            if (techs.length === 0) { 
+                document.getElementById('tech-error').classList.add('visible'); 
+                isValidSubmission = false; 
+            } else { 
+                document.getElementById('tech-error').classList.remove('visible'); 
+            }
+
+
+            if (img.value.trim() && !isValidUrl(img.value)) { 
+                markInvalid(img, 'proj-image-error'); 
+                isValidSubmission = false; 
+            } else {
+                markValid(img, 'proj-image-error');
+            }
+
+
+            if (!isValidSubmission) {
+                const firstInvalid = document.querySelector('.invalid, .error-msg.visible');
+                if (firstInvalid) {
+                    if (firstInvalid.classList.contains('error-msg')) {
+                        const parentField = firstInvalid.closest('.field');
+                        const inputControl = parentField ? parentField.querySelector('input, textarea') : null;
+                        if (inputControl) inputControl.focus();
+                    } else {
+                        firstInvalid.focus();
+                    }
+                }
+                return;
+            }
+
+
+            rowCount++;
+            const techList = techs.map(cb => cb.value).join(', ');
+            const imgSrc = img.value.trim();
+            
+
+            const imgCell = imgSrc
+                ? `<img src="${escHtml(imgSrc)}" alt="Thumbnail for ${escHtml(name.value.trim())}">`
+                : `<span class="no-img">No image</span>`;
+
+
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${rowCount}</td>
+                <td>${escHtml(name.value.trim())}</td>
+                <td>${escHtml(desc.value.trim())}</td>
+                <td><a href="${escHtml(url.value.trim())}" target="_blank" rel="noopener">${escHtml(url.value.trim())}</a></td>
+                <td>${escHtml(techList)}</td>
+                <td>${imgCell}</td>
+                <td>${escHtml(date.value)}</td>
+            `;
+            
+            document.getElementById('projects-tbody').appendChild(tr);
+
+            const section = document.getElementById('projects-section');
+            section.classList.add('visible');
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            projectForm.reset();
+        });
+
+
+        projectForm.addEventListener('reset', function() {
+
+            document.querySelectorAll('.invalid').forEach(el => el.classList.remove('invalid'));
+
+            document.querySelectorAll('.error-msg').forEach(el => el.classList.remove('visible'));
+        });
+
+
+        function escHtml(str) {
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2026 The Boo Bakery</p>
+    </footer>
+
+</body>
+
+
+</html>
+

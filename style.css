@@ -187,3 +187,61 @@ button[type="submit"] {
   border: none;
   border-radius: 4px;
 }
+
+/* CV STYLE */
+
+.main-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    grid-template-areas: 
+        "header header"
+        "skills projects"
+        "contact contact";
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+    font-family: "Comic Relief", system-ui !important;
+}
+
+.profile { grid-area: header; background: #532c5f; color: #ffffff; padding: 20px; border-radius: 8px; }
+.skills { grid-area: skills; background: #532c5f; color: #ffffff; padding: 20px; border-radius: 8px; }
+.projects { grid-area: projects; }
+.contact { grid-area: contact; text-align: center; border-top: 2px solid #ffffff; padding-top: 20px; }
+
+
+.flex-skills {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 25px;
+}
+
+.flex-skills span {
+    background: rgb(226, 195, 255);
+    color: black;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    padding: 15px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    background: rgb(226, 195, 255);
+}
+
+.featured {
+    background: #532c5f;
+    color: white;
+    border: 2px solid #4a0063;
+    transform: scale(1.02); 
+}
