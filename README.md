@@ -27,7 +27,17 @@ I've chosen the "Local Small Business Digital Presence" Subject.
 - [x] Accessible form: form includes at least 5 different types of controls, uses label, fieldset/legend, and provides visible error messages with aria-describedby.
 - [x] JavaScript validation: client-side validation is implemented, prevents form submission on errors, and displays accessible error messages.
 - [x] Data display: after validation, form data is displayed in an accessible table on the same page (with caption, proper headers, and dynamically added rows).
-- [ ] Accessibility: implementation is optimized for accessibility and achieves a high Lighthouse score (95+).
-- [ ] Performance: all performance metrics are optimized for fast loading and smooth user experience.
+- [x] Accessibility: implementation is optimized for accessibility and achieves a high Lighthouse score (95+).
+- [x] Performance: all performance metrics are optimized for fast loading and smooth user experience.
 - [ ] Page complexity: add images and other media to enhance visual appeal, plus light animations or interactive elements.
 - [x] Validation: HTML/CSS validation completed with no errors and the final site is published on GitHub Pages.
+
+## Lighthouse scores
+- index.html - 98
+- overview.html - 97
+- about.html - 99
+- data.html - 98
+- contact.html - 98
+- chatbot.html - 96
+- CV.html - 100
+- portofolio.html - 100
